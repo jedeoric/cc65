@@ -11,6 +11,7 @@
         .include        "zeropage.inc"
 
 
+
 __sysmkdir:
         ; Throw away all parameters except the name
         dey
@@ -20,11 +21,12 @@ __sysmkdir:
         ; Get name
         jsr     popax
 
+        stx     tmp1
+        ldy     tmp1
+      
+        ldx     #$00
         ; Call telemon primitive
 
         BRK_TELEMON(XMKDIR)
 
         rts
-
-
-
