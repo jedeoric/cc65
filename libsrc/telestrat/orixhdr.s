@@ -8,12 +8,10 @@
     .export __ORIXHDR__:abs = 1
 
     ; These symbols, also, come from the configuration file.
-    .import __AUTORUN__, __PROGFLAG__
     .import __MAIN_START__, __MAIN_LAST__
 
-
 ; ------------------------------------------------------------------------
-; Orix header see http://orix.oric.org/doku.php?id=orix:header for specs
+; Orix header
 
 .segment        "ORIXHDR"
 
@@ -22,9 +20,10 @@
     .byte   "ori"                   ; Magic number
 
     .byte   $01                     ; Version of the header
-    .byte   $00,%00000000           ; 6502 only
-    .byte   $00,$00                 ; Type of language
-    .byte   $00,$00                 ; OS version
+    .byte   $00                     ; Cpu type. 6502: 0
+    .byte   $00
+    .byte   $00, $00                ; Type of language
+    .byte   $00, $00                ; OS version
 
     .byte   $00                     ; Reserved
     .byte   $00                     ; Auto or not

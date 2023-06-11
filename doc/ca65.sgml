@@ -4846,6 +4846,7 @@ compiler, depending on the target system selected:
 <item><tt/__SIM65C02__/ - Target system is <tt/sim65c02/
 <item><tt/__SUPERVISION__/ - Target system is <tt/supervision/
 <item><tt/__SYM1__/ - Target system is <tt/sym1/
+<item><tt/__TELESTRAT__/ - Target system is <tt/telestrat/
 <item><tt/__VIC20__/ - Target system is <tt/vic20/
 </itemize>
 
